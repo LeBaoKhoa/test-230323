@@ -1,0 +1,22 @@
+footer {
+    padding: 40px 13%;
+    background-color: #00081d;
+    color: #ccc;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+        color: $primary-color;
+        text-decoration: none;
+    }
+    .icon_gr {
+        display: flex;
+        gap: 30px;
+        i {
+            padding: 8px;
+            border-radius: 50%;
+            background-color: #1a294e;
+            cursor: pointer;
+        }
+    }
+}

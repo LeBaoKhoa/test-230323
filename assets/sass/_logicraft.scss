@@ -1,0 +1,94 @@
+.container {
+    &__logicraft {
+        
+        &-abs {
+            margin: 0 auto;
+            position: relative;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            transform: translateY(-80px);
+            background-color: $white-color;
+            box-shadow: 0 2px 10px 1px $black-color;
+            &--item {
+                flex: 1;
+                padding: 20px;
+                @include flexCenter(col);
+                &:nth-child(2) {
+                    border: 1px solid #ccc;
+                    border-color: transparent #ccc;
+                }
+                &-img {
+                    padding: 5px;
+                    &img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+                h3 {
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                    margin-bottom: 8px;
+                }
+                p {
+                    font-size: 1.4rem;
+                    text-align: center;
+                    color: #555;
+                    margin-bottom: 8px;
+                }
+                &-btn {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+        &-rel {
+            @include flexCenter(col);
+            padding: 10px;
+            &--title {
+                font-size: 2.6rem;
+                font-weight: 600;
+                margin: -40px 0 50px;
+            }
+            &--wrapper {
+                width: 80%;
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            &--item {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                &-block {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img {
+                        width: 70px;
+                        height: 70px;
+                        padding: 10px;
+                    }
+                }
+                &-info {
+                    h3 {
+                        font-size: 1.4rem;
+                        font-weight: 600;
+                        margin-bottom: 8px;
+                    }
+                    p {
+                        font-size: 1.3rem;
+                        color: #555;
+                    }
+                }
+            }
+            &--item.item-center {
+                display: flex;
+                align-items: center;
+                img {
+                    width: auto;
+                    object-fit: cover;
+                    height: 200px;
+                }
+            }
+        }
+    }
+}

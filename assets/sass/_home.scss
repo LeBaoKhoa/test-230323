@@ -1,0 +1,27 @@
+.container {
+    &__home {
+        background-image: url(../images/bg2.jpg);
+        background-size: cover;
+        height: 100vh;
+        color: $white-color;
+        @include flexCenter(col);
+        gap: 25px;
+        &-title {
+            font-size: 5rem;
+            font-weight: 600;
+        }
+        &-desc-top {
+            font-size: 2.5rem;
+        }
+        &-desc-bottom {
+            font-size: 2rem;
+        }
+        &-btn {
+            font-size: 1.4rem;
+            margin-top: 10px;
+        }
+    }
+}
+footer {
+    @include flexCenter();
+}

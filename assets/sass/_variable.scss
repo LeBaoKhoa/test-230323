@@ -1,0 +1,44 @@
+$primary-color: #d4132e;
+$white-color: #fff;
+$black-color: #000;
+
+@mixin flexCenter($row: row) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @if $row == col {
+        flex-direction: column;
+    }
+}
+
+$res_mobile: "only screen and (max-width: 600px)";
+$res_600: "only screen and (min-width: 600px) and (max-width: 991px)";
+$res_992: "only screen and (min-width: 992px) and (max-width: 1023px)";
+$res_1024: "only screen and (min-width: 1024px) and (max-width: 1999px)";
+$res_1200: "only screen and (min-width: 1200px)";
+
+@mixin responsive_mobile() {
+    @media #{$res_mobile} {
+        @content;
+    }
+}
+@mixin responsive_600() {
+    @media #{$res_600} {
+        @content;
+    }
+}
+@mixin responsive_992() {
+    @media #{$res_992} {
+        @content;
+    }
+}
+@mixin responsive_1024() {
+    @media #{$res_1024} {
+        @content;
+    }
+}
+@mixin responsive_1200() {
+    @media #{$res_1200} {
+        @content;
+    }
+}
